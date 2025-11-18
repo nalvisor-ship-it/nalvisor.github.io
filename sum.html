@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Add Two Numbers</title>
+  <style>
+    body { font-family: Arial, sans-serif; background:#f4f4f9; color:#333; display:flex; justify-content:center; align-items:center; height:100vh; margin:0; }
+    .card { background:#fff; padding:28px; border-radius:12px; box-shadow:0 6px 18px rgba(0,0,0,0.08); width:320px; text-align:center; }
+    input { width:100%; padding:8px 10px; margin:8px 0; box-sizing:border-box; border-radius:6px; border:1px solid #ddd; }
+    button { padding:10px 16px; border-radius:8px; border:none; cursor:pointer; }
+    .btn-primary { background:#007bff; color:#fff; }
+    #result { margin-top:12px; font-weight:600; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h2>Add Two Numbers</h2>
+    <input type="number" id="num1" placeholder="Enter first number" />
+    <input type="number" id="num2" placeholder="Enter second number" />
+    <button class="btn-primary" onclick="addNumbers()">Add</button>
+    <p id="result"></p>
+
+    <p style="margin-top:14px;font-size:13px;"><a href="index.html">← Back to home</a></p>
+  </div>
+
+  <script>
+    function addNumbers() {
+      const a = parseFloat(document.getElementById('num1').value);
+      const b = parseFloat(document.getElementById('num2').value);
+      const out = document.getElementById('result');
+
+      if (isNaN(a) || isNaN(b)) {
+        out.innerText = 'Please enter valid numbers.';
+        return;
+      }
+      out.innerText = 'The sum is: ' + (a + b);
+    }
+  </script>
+</body>
+</html>
