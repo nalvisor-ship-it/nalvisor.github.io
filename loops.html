@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loops Calculator</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f9;
+            margin: 0;
+            padding: 40px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .card {
+            background: white;
+            width: 380px;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 8px;
+            margin-bottom: 18px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            font-size: 16px;
+            border: none;
+            border-radius: 6px;
+            background: #007bff;
+            color: white;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #005fcc;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+            white-space: pre-line;
+        }
+
+        a {
+            display: block;
+            margin-top: 20px;
+            color: #007bff;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <h2>Loops Calculator</h2>
+
+    <label>Enter N:</label>
+    <input type="number" id="num" placeholder="Enter a natural number">
+
+    <button onclick="compute()">Compute</button>
+
+    <p id="result"></p>
+
+    <a href="index.html">← Back to Home</a>
+</div>
+
+<script>
+function compute() {
+    let n = parseInt(document.getElementById("num").value);
+
+    if (isNaN(n) || n <= 0) {
+        document.getElementById("result").innerText = "Please enter a positive integer.";
+        return;
+    }
+
+    // 1. FACTORIAL using WHILE loop
+    let factorial = 1;
+    let i = 1;
+    while (i <= n) {
+        factorial *= i;
+        i++;
+    }
+
+    // 2. SUM using DO-WHILE loop
+    let sum = 0;
+    let j = 1;
+    do {
+        sum += j;
+        j++;
+    } while (j <= n);
+
+    // 3. AVERAGE using FOR loop
+    let total = 0;
+    for (let k = 1; k <= n; k++) {
+        total += k;
+    }
+    let average = total / n;
+
+    // Show results
+    document.getElementById("result").innerText =
+        "Factorial of " + n + " (While Loop): " + factorial +
+        "\nSum of first " + n + " natural numbers (Do-While Loop): " + sum +
+        "\nAverage of first " + n + " natural numbers (For Loop): " + average.toFixed(2);
+}
+</script>
+
+</body>
+</html>
