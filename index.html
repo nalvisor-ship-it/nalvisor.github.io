@@ -1,53 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to My Website</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f9;
-            color: #333;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Neo Alvisor – Portfolio</title>
 
-        .container {
-            background: white;
-            padding: 40px;
-            border-radius: 12px;
-            width: 80%;
-            max-width: 500px;
-            text-align: center;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-        }
+<style>
+    body {
+        margin: 0;
+        background: black;
+        font-family: Arial, sans-serif;
+        color: white;
+    }
 
-        h1 {
-            color: #007bff;
-            margin-bottom: 10px;
-        }
+    /* LEFT SIDEBAR */
+    .sidebar {
+        width: 250px;
+        height: 100vh;
+        background: #d80000;
+        padding: 30px;
+        box-sizing: border-box;
+        position: fixed;
+        left: 0;
+        top: 0;
+    }
 
-        p {
-            margin: 10px 0;
-            line-height: 1.6;
-        }
-    </style>
+    .sidebar h2 {
+        font-size: 28px;
+        margin-bottom: 20px;
+    }
+
+    .sidebar p {
+        font-size: 16px;
+        line-height: 1.4;
+        white-space: pre-line;
+    }
+
+    /* MAIN SECTION */
+    .main {
+        margin-left: 300px;
+        padding: 50px;
+        text-align: center;
+    }
+
+    .main h1 {
+        font-size: 45px;
+        margin-top: 50px;
+        font-weight: bold;
+    }
+
+    /* PROJECTS BOX */
+    .projects-box {
+        background: #ffc80a;
+        margin: 70px auto;
+        width: 80%;
+        padding: 40px;
+        border-radius: 10px;
+        color: black;
+    }
+
+    .projects-box h2 {
+        color: white;
+        font-size: 28px;
+        margin-bottom: 30px;
+    }
+
+    /* BUTTONS */
+    .project-buttons {
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+        flex-wrap: wrap;
+    }
+
+    .project-buttons button {
+        width: 180px;
+        height: 120px;
+        font-size: 18px;
+        border: 4px solid #b30000;
+        border-radius: 30px;
+        background: transparent;
+        cursor: pointer;
+        font-weight: bold;
+        color: black;
+        transition: 0.2s;
+    }
+
+    .project-buttons button:hover {
+        background: #ffdf5d;
+    }
+
+</style>
 </head>
+
 <body>
-    <div class="container">
-        <h1>Hello, I’m Neo Alvisor!</h1>
-        <p>Welcome to my personal website hosted on GitHub Pages.</p>
-        <p>This is where I’ll share my projects and ideas.</p>
-        <a href="sum.html">
-  <button style="padding:10px 16px; border-radius:8px; border:none; background:#007bff; color:#fff; cursor:pointer;">
-    Open Sum Tool
-  </button>
-</a>
+
+<!-- LEFT SIDEBAR -->
+<div class="sidebar">
+    <h2>About me</h2>
+    <p>
+-I am introverted
+-I like breakcore
+-My favorite food is Takoyaki
+-I have a cat named Ein
+
+My list of fears:
+1. heights
+2. blue water
+3. owls
+4. pigs
+5. horses
+6. tall structures
+7. brightly colored animals
+8. women
+9. Poland
+10. windowless garage
+11. dirty feet
+12. old silverware
+14. the number 13
+    </p>
+</div>
+
+<!-- MAIN SECTION -->
+<div class="main">
+    <h1>Hello my name is<br>Neo Alvisor</h1>
+
+    <!-- PROJECTS SECTION -->
+    <div class="projects-box">
+        <h2>MY PROJECTS</h2>
+
+        <div class="project-buttons">
+            <!-- Loops -->
+            <button onclick="window.location.href='loops.html'">
+                Loops Calculator
+            </button>
+
+            <!-- Payroll -->
+            <button onclick="window.location.href='payroll.html'">
+                Payroll Manager
+            </button>
+
+            <!-- Unit Converter -->
+            <button onclick="window.location.href='unitconverter.html'">
+                Unit Converter
+            </button>
+
+            <!-- Tax -->
+            <button onclick="window.location.href='tax.html'">
+                Tax Calculator
+            </button>
+        </div>
     </div>
+</div>
+
 </body>
 </html>
+
