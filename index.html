@@ -7,19 +7,42 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            text-align: center;
             background-color: #f4f4f9;
             color: #333;
-            padding: 50px;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
         }
+
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            width: 80%;
+            max-width: 500px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
         h1 {
             color: #007bff;
+            margin-bottom: 10px;
+        }
+
+        p {
+            margin: 10px 0;
+            line-height: 1.6;
         }
     </style>
 </head>
 <body>
-    <h1>Hello, I’m Neo Alvisor!</h1>
-    <p>Welcome to my personal website hosted on GitHub Pages.</p>
-    <p>This is where I’ll share my projects and ideas.</p>
+    <div class="container">
+        <h1>Hello, I’m Neo Alvisor!</h1>
+        <p>Welcome to my personal website hosted on GitHub Pages.</p>
+        <p>This is where I’ll share my projects and ideas.</p>
+    </div>
 </body>
 </html>
